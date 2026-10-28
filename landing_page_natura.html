@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Sana Perú - 10% Extra en Colágenos</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Phosphor Icons para los iconos -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            green: '#00853f',
+                            dark: '#005c2a',
+                            gold: '#d4af37',
+                            light: '#f4fbf6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-gray-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md relative z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="ph-fill ph-leaf text-4xl text-brand-green"></i>
+                    <span class="font-bold text-2xl text-brand-green tracking-tight">Vida Sana Perú</span>
+                </div>
+
+                <!-- Contacto Rápido Desktop -->
+                <div class="hidden md:flex items-center gap-6 text-sm">
+                    <div class="flex items-center gap-2 text-gray-600">
+                        <i class="ph-fill ph-whatsapp-logo text-brand-green text-xl"></i>
+                        <span class="font-medium">Asesoría vía WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Hero & Form Section -->
+    <main class="flex-grow relative bg-brand-green overflow-hidden">
+        <!-- Textura/Patrón de fondo -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+                <!-- Columna Izquierda: Mensaje Hero -->
+                <div class="text-center lg:text-left text-white space-y-6">
+                    <span class="inline-block py-1 px-4 rounded-full bg-brand-gold/20 text-brand-gold font-semibold text-sm border border-brand-gold/50 backdrop-blur-sm">
+                        Bono de Bienvenida - Exclusivo Nuevos Clientes
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl font-bold leading-tight">
+                        ¿Sientes desgaste articular o quieres revitalizar tu piel y cabello?
+                    </h1>
+                    <p class="text-lg text-green-50 max-w-lg mx-auto lg:mx-0">
+                        Encuentra el colágeno <strong>Santa Natura</strong> ideal para ti con nuestra asesoría experta. Regístrate hoy y llévate un <strong>10% de descuento adicional</strong> en tu primera compra.
+                    </p>
+
+                    <div class="hidden lg:grid grid-cols-2 gap-6 pt-8">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                <i class="ph-fill ph-chat-circle-text text-2xl text-brand-gold"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-semibold text-white">Asesoría 100%</h4>
+                                <p class="text-xs text-green-100">Personalizada por WhatsApp</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                                <i class="ph-fill ph-truck text-2xl text-brand-gold"></i>
+                            </div>
+                            <div class="text-left">
+                                <h4 class="font-semibold text-white">Envíos Flexibles</h4>
+                                <p class="text-xs text-green-100">Contra entrega en Lima</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario -->
+                <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-10 max-w-md mx-auto w-full relative">
+                    <!-- Detalle decorativo -->
+                    <div class="absolute -top-4 -right-4 bg-brand-gold text-white w-20 h-20 rounded-full flex flex-col items-center justify-center shadow-lg transform rotate-12 hidden sm:flex">
+                        <span class="font-bold text-sm text-center leading-tight">10%<br>Extra</span>
+                    </div>
+
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800">Obtén tu Código de Descuento</h2>
+                        <p class="text-sm text-gray-500 mt-2">Te lo enviaremos de inmediato a tu correo electrónico.</p>
+                    </div>
+                    
+                    <form id="contactForm" action="#" method="POST" class="space-y-5" >
+
+                        <!-- Nombre Completo -->
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="ph ph-user text-gray-400 text-lg"></i>
+                                </div>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-brand-green outline-none transition-shadow text-gray-800 bg-gray-50 focus:bg-white">
+                            </div>
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div>
+                            <label for="correo" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="ph ph-envelope text-gray-400 text-lg"></i>
+                                </div>
+                                <input type="email" id="correo" name="correo" placeholder="Aquí enviaremos tu cupón" required
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-brand-green outline-none transition-shadow text-gray-800 bg-gray-50 focus:bg-white">
+                            </div>
+                        </div>
+
+                        <!-- Número de Celular -->
+                        <div>
+                            <label for="celular" class="block text-sm font-medium text-gray-700 mb-1">Número de Celular o WhatsApp</label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="ph ph-phone text-gray-400 text-lg"></i>
+                                </div>
+                                <input type="tel" id="celular" name="celular" placeholder="Para contactarte si hay dudas" required
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-green focus:border-brand-green outline-none transition-shadow text-gray-800 bg-gray-50 focus:bg-white">
+                            </div>
+                        </div>
+
+                        <!-- Checkboxes (Opciones) -->
+                        <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
+                            <label class="block text-sm font-medium text-gray-700 mb-3">¿Qué estilo de vida te interesa principalmente?</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-start gap-2 cursor-pointer group">
+                                    <input type="checkbox" name="opciones[]" value="estomago" class="mt-0.5 w-4 h-4 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 accent-brand-green cursor-pointer">
+                                    <span class="text-sm text-gray-600 group-hover:text-brand-green transition-colors">Para el estomago</span>
+                                </label>
+                                <label class="flex items-start gap-2 cursor-pointer group">
+                                    <input type="checkbox" name="opciones[]" value="defensas" class="mt-0.5 w-4 h-4 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 accent-brand-green cursor-pointer">
+                                    <span class="text-sm text-gray-600 group-hover:text-brand-green transition-colors">Para las defensas</span>
+                                </label>
+                                <label class="flex items-start gap-2 cursor-pointer group">
+                                    <input type="checkbox" name="opciones[]" value="nervioso" class="mt-0.5 w-4 h-4 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 accent-brand-green cursor-pointer">
+                                    <span class="text-sm text-gray-600 group-hover:text-brand-green transition-colors">Para el sistema nervioso</span>
+                                </label>
+                                <label class="flex items-start gap-2 cursor-pointer group">
+                                    <input type="checkbox" name="opciones[]" value="huesos" class="mt-0.5 w-4 h-4 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 accent-brand-green cursor-pointer">
+                                    <span class="text-sm text-gray-600 group-hover:text-brand-green transition-colors">Para los huesos</span>
+                                </label>
+                                <label class="flex items-start gap-2 cursor-pointer group">
+                                    <input type="checkbox" name="opciones[]" value="pulmones2" class="mt-0.5 w-4 h-4 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 accent-brand-green cursor-pointer">
+                                    <span class="text-sm text-gray-600 group-hover:text-brand-green transition-colors">Para los pulmones</span>
+                                </label>
+                                <label class="flex items-start gap-2 cursor-pointer group">
+                                    <input type="checkbox" name="opciones[]" value="urinarias" class="mt-0.5 w-4 h-4 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 accent-brand-green cursor-pointer">
+                                    <span class="text-sm text-gray-600 group-hover:text-brand-green transition-colors">Para las vías urinarias</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Checkbox de Privacidad -->
+                        <div class="flex items-start gap-3 pt-2">
+                            <div class="flex items-center h-5">
+                                <input id="privacidad" name="privacidad" type="checkbox" required
+                                    class="w-5 h-5 text-brand-green border-gray-300 rounded focus:ring-brand-green focus:ring-2 cursor-pointer accent-brand-green">
+                            </div>
+                            <div class="text-sm">
+                                <label for="privacidad" class="font-medium text-gray-600 cursor-pointer">
+                                    Acepto los <a href="#" class="text-brand-green hover:text-brand-dark underline transition-colors">Términos de la Promoción</a> y el tratamiento de datos.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Botón Enviar -->
+                        <div class="pt-4">
+                            <button type="submit"
+                                class="w-full bg-orange-500 text-white font-bold text-lg py-4 px-8 rounded-xl shadow-lg hover:bg-orange-600 hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group">
+                                <span>¡QUIERO MI DESCUENTO!</span>
+                                <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                            <p class="text-xs text-center text-gray-400 mt-3">🔒 Tus datos están seguros. Cero spam.</p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Curva decorativa inferior -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg class="relative block w-full h-[30px] md:h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.9,130.2,201.5,122.9,243.6,118.52,284.14,103.22,321.39,56.44Z" class="fill-gray-900"></path>
+            </svg>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 relative z-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i class="ph-fill ph-leaf text-2xl text-brand-green"></i>
+                    <span class="font-bold text-lg text-white">Vida Sana Perú</span>
+                </div>
+
+                <div class="text-sm text-gray-500 text-center md:text-right">
+                    <p>&copy; 2026 Vida Sana Perú - Distribuidor Autorizado de Santa Natura.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Mensaje -->
+    <div id="customAlert" class="fixed inset-0 bg-gray-900/60 hidden items-center justify-center z-[100] px-4 backdrop-blur-sm transition-opacity">
+        <div id="customAlertBox" class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform scale-95 opacity-0 transition-all duration-300">
+            <div class="w-16 h-16 bg-brand-light rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-brand-green">
+                <i class="ph-fill ph-envelope-open text-4xl text-brand-green"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2">¡Revisa tu correo!</h3>
+            <p class="text-gray-600 mb-6 text-lg font-medium" id="customAlertMessage"></p>
+            <button onclick="closeCustomAlert()" class="w-full bg-brand-green text-white font-semibold py-3 rounded-xl hover:bg-brand-dark transition-colors shadow-md">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Referencia al formulario
+        const form = document.getElementById('contactForm');
+
+        // Escuchar el evento de envío
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            if (form.checkValidity()) {
+                showCustomAlert("Te hemos enviado tu código de descuento del 10% a tu correo electrónico. ¡Búscalo ahora!");
+                form.reset();
+            }
+        });
+
+        // Lógica del Modal
+        function showCustomAlert(message) {
+            const modal = document.getElementById('customAlert');
+            const modalBox = document.getElementById('customAlertBox');
+            const messageEl = document.getElementById('customAlertMessage');
+
+            messageEl.textContent = message;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            void modal.offsetWidth; 
+            modalBox.classList.remove('scale-95', 'opacity-0');
+            modalBox.classList.add('scale-100', 'opacity-100');
+        }
+
+        function closeCustomAlert() {
+            const modal = document.getElementById('customAlert');
+            const modalBox = document.getElementById('customAlertBox');
+
+            modalBox.classList.remove('scale-100', 'opacity-100');
+            modalBox.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
